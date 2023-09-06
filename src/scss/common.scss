@@ -1,0 +1,26 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+.block-body {
+  display: flex;
+
+  &__title {
+    font-family: Mak;
+    @include adaptiveValue("font-size", 64, 30);
+    font-weight: 300;
+    color: $darkGreen;
+    &:not(:last-child) {
+      margin-bottom: toRem(70);
+    }
+    &--small {
+      @include adaptiveValue("font-size", 45, 30);
+    }
+  }
+}
+
+
+// ==========
+// <div class="block-body">
+// <h2 class="block-body__title block-body__title--small"></h2>
+// <div class=""></div>
+// </div>
+// ========
