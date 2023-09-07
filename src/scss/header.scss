@@ -1,9 +1,6 @@
 //====================================================================================================
 .header {
   background-color: $bgColor;
-  // background-image: url("@img/bgImg.png");
-  // background-size: cover;
-  // background-position: center;
   position: fixed;
   width: 100%;
   top: 0;
@@ -54,7 +51,7 @@
         overflow: auto;
         display: flex;
         flex-direction: column;
-        background-color: $bgColorLight;
+        background-color: $bgColorDark;
         transition: left 0.5s;
         &::before {
           content: "";
@@ -100,7 +97,7 @@
       color: #fff;
       @media (any-hover: hover) {
         &:hover {
-          // text-decoration: underline;
+          text-decoration: underline;
         }
       }
     }

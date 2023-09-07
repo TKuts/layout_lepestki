@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-	@@include('html/_head.htm',{
-	"title":"HomePage"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
 
-			
-				
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
 
+			<section class="hero hero--position">
+				<div class="hero__content">
+					<h1 class="hero__tittle">LEPESTKI</h1>
+					<h2 class="hero__tittle hero__tittle--light">СТУДІЯ ФЛОРИСТИКИ</h2>
+					<p class="hero__tittle hero__tittle--small">Невичерпне натхнення квітковим мистецтвом</p>
+				</div>
+				<a href="#" class="button button--green">
+					<span>
+						ПОСЛУГИ
+					</span>
+				</a>
+			</section>
 
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_js.htm',{})
-	</body>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

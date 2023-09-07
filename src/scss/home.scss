@@ -1,3 +1,41 @@
 //====================================================================================================
+.hero {
+  background-image: url("@img/bgImg.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  &--position {
+    padding: 274px 0;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    font-family: MAK;
+    font-size: toRem(96);
+    line-height: 130%;
+    margin-bottom: 56px;
+
+		@include adaptiveValue("font-size", 96, 40, 0, $containerWidth, 767.98);
+
+    @include adaptiveValue("padding-left", 15, 19, 0, $containerWidth, 991.98);
+    @include adaptiveValue("padding-right", 15, 19, 0, $containerWidth, 991.98);
+  }
+
+  &__tittle {
+    text-transform: uppercase;
+    &--light {
+			@include adaptiveValue("font-size", 64, 28, 0, $containerWidth, 767.98);
+    }
+    &--small {
+      font-family: Montserrat;
+      font-size: toRem(24);
+      line-height: normal;
+
+			@include adaptiveValue("font-size", 24, 12, 0, $containerWidth, 767.98);
+    }
+  }
+}
 
 //====================================================================================================
