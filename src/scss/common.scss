@@ -2,21 +2,23 @@
 
 .block-body {
   display: flex;
+  justify-content: center;
+	@include adaptiveValue("margin-bottom", 50, 30, 0, $containerWidth, 767.98);
 
   &__title {
     font-family: Mak;
     @include adaptiveValue("font-size", 64, 30);
     font-weight: 300;
     color: $darkGreen;
+
     &:not(:last-child) {
-      margin-bottom: toRem(70);
+      margin-bottom: toRem(12);
     }
     &--small {
       @include adaptiveValue("font-size", 45, 30);
     }
   }
 }
-
 
 // ==========
 // <div class="block-body">
