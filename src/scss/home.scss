@@ -12,7 +12,7 @@
     flex-direction: column;
     color: #fff;
     text-align: center;
-    font-family: MAK;
+    font-family: Dihjauti;
     font-size: toRem(96);
     line-height: 130%;
     margin-bottom: 56px;
@@ -49,25 +49,32 @@
     // grid-template-columns: repeat(2, 1fr);
   }
 
-  &__body {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    @media (max-width: $tablet) {
-      grid-template-columns: auto;
-    }
-    // gap: toRem(54);
-  }
-  &__img {
-    max-width: 100%;
-    border-radius: 45px;
-    @media (max-width: $tablet) {
-      margin-bottom: toRem(20);
-    }
+  // &__body {
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+  // 	align-items: center;
+  //   @media (max-width: $tablet) {
+  //     grid-template-columns: auto;
+  //   }
+  //   // gap: toRem(54);
+  // }
+  // &__img {
+  //   max-width: 100%;
+  //   border-radius: 45px;
+  //   @media (max-width: $tablet) {
+  //     margin-bottom: toRem(20);
+  //   }
 
-    @media (min-width: $tablet) {
-      padding-right: toRem(54);
-    }
-  }
+  //   @media (min-width: $tablet) {
+  //     padding-right: toRem(54);
+  //   }
+  // }
+
+  
+}
+// ======
+
+.services {
 }
 
 //====================================================================================================

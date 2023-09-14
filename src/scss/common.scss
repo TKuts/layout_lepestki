@@ -2,24 +2,85 @@
 
 .block-body {
   display: flex;
-  justify-content: center;
-	@include adaptiveValue("margin-bottom", 50, 30, 0, $containerWidth, 767.98);
+  align-items: center;
+  flex-direction: column;
+  @include adaptiveValue("margin-bottom", 50, 30, 0, $containerWidth, 767.98);
 
   &__title {
-    font-family: Mak;
+    font-family: Dihjauti;
     @include adaptiveValue("font-size", 64, 30);
     font-weight: 300;
     color: $darkGreen;
-
     &:not(:last-child) {
       margin-bottom: toRem(12);
     }
+
     &--small {
-      @include adaptiveValue("font-size", 45, 30);
+      display: flex;
+      align-items: center;
+
+      @include adaptiveValue("font-size", 45, 26);
+    }
+  }
+  @media (max-width: $tablet) {
+    &--top {
+      grid-row: 1;
+    }
+    &--bottom {
+      grid-row: 2;
     }
   }
 }
+.top-bloks {
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
+    align-items: center;
+    @media (max-width: $tablet) {
+      grid-template-columns: auto;
+    }
+
+    &--center {
+      display: flex;
+    }
+  }
+  // gap: toRem(54);
+  &__img {
+    max-width: 100%;
+    border-radius: 45px;
+    @media (max-width: $tablet) {
+      margin-bottom: toRem(20);
+    }
+
+    &--right {
+      @media (min-width: $tablet) {
+        padding-right: toRem(54);
+      }
+    }
+    &--left {
+      @media (min-width: $tablet) {
+        padding-left: toRem(54);
+      }
+    }
+  }
+  &__text {
+    & p {
+      @include adaptiveValue("font-size", 24, 16, 0, $containerWidth, 767.98);
+
+      &:not(:last-child) {
+        @include adaptiveValue(
+          "margin-bottom",
+          36,
+          20,
+          0,
+          $containerWidth,
+          767.98
+        );
+      }
+    }
+  }
+}
 // ==========
 // <div class="block-body">
 // <h2 class="block-body__title block-body__title--small"></h2>

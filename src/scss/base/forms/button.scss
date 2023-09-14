@@ -2,7 +2,7 @@
 // Сніппет (HTML): btn
 
 .button {
-  font-family: Mak;
+  font-family: Dihjauti;
   display: inline-flex;
   padding: toRem(16) toRem(54);
   align-items: center;
@@ -16,18 +16,31 @@
 
   @media (any-hover: hover) {
     &:hover {
-      background-color: #FFD4E6;
+      background-color: $pinkBtnHover;
     }
   }
 
   &--green {
-    background-color: #8fad33;
+    background-color:$greenBtn;
     @media (any-hover: hover) {
       &:hover {
-        background-color:#E1F999;
+        background-color:$greenBtnHover;
       }
     }
   }
+	&--pink {
+    background-color: $pinkBtn;
+		@include adaptiveValue("margin-top", 40, 20, 0, $containerWidth, 767.98);
+		@include adaptiveValue("margin-bottom", 20, 25, 0, $containerWidth, 767.98);
+
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color:$pinkBtnHover;
+      }
+    }
+  }
+
 
   &--fw {
     width: 100%;
