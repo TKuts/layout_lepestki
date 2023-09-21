@@ -69,12 +69,34 @@
   //     padding-right: toRem(54);
   //   }
   // }
-
-  
 }
 // ======
 
 .services {
+  &__container {
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #608001;
+      left: 0;
+      top: 158px;
+      position: absolute;
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #608001;
+      left: 0;
+      bottom: 100px;
+      position: absolute;
+      z-index: -1;
+    }
+  }
 }
 
 //====================================================================================================
