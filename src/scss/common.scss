@@ -2,15 +2,21 @@
 
 .block-body {
   display: flex;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
+
+	@media (max-width: $tablet) {
+		align-items: center;
+	}
+
   @include adaptiveValue("margin-bottom", 50, 30, 0, $containerWidth, 767.98);
-	position: relative;
+
   &__title {
     font-family: Dihjauti;
     @include adaptiveValue("font-size", 64, 30);
     font-weight: 300;
     color: $darkGreen;
+
     &:not(:last-child) {
       margin-bottom: toRem(12);
     }
@@ -21,9 +27,6 @@
 
       @include adaptiveValue("font-size", 45, 26);
     }
-
-
-		
   }
   @media (max-width: $tablet) {
     &--top {
