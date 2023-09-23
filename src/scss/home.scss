@@ -86,7 +86,7 @@
       position: relative;
       z-index: -1;
 
-      @include adaptiveValue("top", 160, 420, 0, $containerWidth, 767.98);
+      @include adaptiveValue("top", 64, 420, 0, $containerWidth, 767.98);
     }
 
     &--adapted {
@@ -113,6 +113,19 @@
 
   &__container {
     // position: relative;
+  }
+}
+
+.warning {
+  &__container {
+    display: flex;
+    align-items: center;
+ 
+  }
+  &__img {
+    @include adaptiveValue("height", 48, 24, 0, $containerWidth, 767.98);
+    @include adaptiveValue("width", 48, 24, 0, $containerWidth, 767.98);
+    @include adaptiveValue("margin-right", 42, 12, 0, $containerWidth, 767.98);
   }
 }
 

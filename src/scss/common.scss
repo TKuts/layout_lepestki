@@ -1,22 +1,61 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.title-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media (max-width: $tablet) {
+    align-items: center;
+  }
+
+  @include adaptiveValue("margin-bottom", 50, 30, 0, $containerWidth, 767.98);
+
+  &__title {
+    display: flex;
+    font-family: Dihjauti;
+    @include adaptiveValue("font-size", 64, 30);
+    font-weight: 300;
+    color: $darkGreen;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: toRem(12);
+    }
+
+    &--small {
+      display: flex;
+      align-items: center;
+
+      @include adaptiveValue("font-size", 45, 26);
+    }
+  }
+  @media (max-width: $tablet) {
+    &--top {
+      grid-row: 1;
+    }
+    &--bottom {
+      grid-row: 2;
+    }
+  }
+}
 
 .block-body {
   display: flex;
   align-items: start;
   flex-direction: column;
 
-	@media (max-width: $tablet) {
-		align-items: center;
-	}
+  @media (max-width: $tablet) {
+    align-items: center;
+  }
 
   @include adaptiveValue("margin-bottom", 50, 30, 0, $containerWidth, 767.98);
 
   &__title {
+    display: flex;
     font-family: Dihjauti;
     @include adaptiveValue("font-size", 64, 30);
     font-weight: 300;
     color: $darkGreen;
-
+    align-items: center;
     &:not(:last-child) {
       margin-bottom: toRem(12);
     }
