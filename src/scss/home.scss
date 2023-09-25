@@ -25,6 +25,7 @@
 
   &__tittle {
     text-transform: uppercase;
+
     &--light {
       @include adaptiveValue("font-size", 64, 28, 0, $containerWidth, 767.98);
     }
@@ -120,7 +121,6 @@
   &__container {
     display: flex;
     align-items: center;
- 
   }
   &__img {
     @include adaptiveValue("height", 48, 24, 0, $containerWidth, 767.98);
