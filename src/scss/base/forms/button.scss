@@ -8,11 +8,11 @@
   align-items: center;
   justify-content: center;
   border-radius: toRem(50);
-  background-color:$pinkBtn;
+  background-color: $pinkBtn;
   color: #212c20;
   transition: all 0.3s;
 
-	@include adaptiveValue("font-size", 32, 20, 0, $containerWidth, 767.98);
+  @include adaptiveValue("font-size", 32, 20, 0, $containerWidth, 767.98);
 
   @media (any-hover: hover) {
     &:hover {
@@ -21,28 +21,37 @@
   }
 
   &--green {
-    background-color:$greenBtn;
+    background-color: $greenBtn;
     @media (any-hover: hover) {
       &:hover {
-        background-color:$greenBtnHover;
+        background-color: $greenBtnHover;
       }
     }
   }
-	&--pink {
+  &--pink {
     background-color: $pinkBtn;
-		@include adaptiveValue("margin-top", 40, 20, 0, $containerWidth, 767.98);
-		@include adaptiveValue("margin-bottom", 20, 25, 0, $containerWidth, 767.98);
-
+    @include adaptiveValue("margin-top", 40, 20, 0, $containerWidth, 767.98);
+    @include adaptiveValue("margin-bottom", 20, 25, 0, $containerWidth, 767.98);
 
     @media (any-hover: hover) {
       &:hover {
-        background-color:$pinkBtnHover;
+        background-color: $pinkBtnHover;
       }
     }
   }
-
 
   &--fw {
     width: 100%;
+  }
+
+  opacity: 0;
+  transform: translate(0px, 15%);
+  transition:
+    opacity 1s,
+    transform 1s;
+
+  ._watcher-view & {
+    opacity: 1;
+    transform: translate(0, 0);
   }
 }

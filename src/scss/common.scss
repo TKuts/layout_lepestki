@@ -17,6 +17,7 @@
     font-weight: 300;
     color: $darkGreen;
     align-items: center;
+    text-transform: uppercase;
     &:not(:last-child) {
       margin-bottom: toRem(12);
     }
@@ -27,6 +28,8 @@
 
       @include adaptiveValue("font-size", 45, 26);
     }
+
+   
   }
   @media (max-width: $tablet) {
     &--top {
@@ -56,6 +59,7 @@
     font-weight: 300;
     color: $darkGreen;
     align-items: center;
+
     &:not(:last-child) {
       margin-bottom: toRem(12);
     }
@@ -63,19 +67,10 @@
     &--small {
       display: flex;
       align-items: center;
-
       @include adaptiveValue("font-size", 45, 26);
     }
 
-    transform: translate(0, 15%);
-    opacity: 0;
-    transition:
-      transform 0.5s,
-      opacity 0.5s;
-
-    ._watcher-view & {
-      transform: translate(0, 0);
-      opacity: 1;
+    &--centr {
     }
   }
 
@@ -88,7 +83,6 @@
     }
   }
 }
-
 
 .top-bloks {
   &__body {
@@ -122,6 +116,7 @@
         padding-left: toRem(54);
       }
     }
+		
   }
   &__text {
     & p {
@@ -136,6 +131,17 @@
           $containerWidth,
           767.98
         );
+      }
+
+      opacity: 0;
+      transform: translate(0px, 15%);
+      transition:
+        opacity 1s,
+        transform 1s;
+
+      ._watcher-view & {
+        opacity: 1;
+        transform: translate(0, 0);
       }
     }
   }
