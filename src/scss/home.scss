@@ -36,7 +36,7 @@
 
       @include adaptiveValue("font-size", 24, 12, 0, $containerWidth, 767.98);
     }
-
+    // ========додає анімацію=========
     opacity: 0;
     transform: translate(0px, 15%);
     transition:
@@ -47,6 +47,7 @@
       opacity: 1;
       transform: translate(0, 0);
     }
+    // ========додає анімацію=========
   }
 }
 // =============
@@ -141,3 +142,96 @@
 }
 
 //====================================================================================================
+
+.example__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  // grid-column-gap: 20px;
+  // grid-row-gap: 20px;
+}
+
+.grid__block1 {
+  grid-area: 1 / 1 / 5 / 4;
+  width: 460px;
+  height: 720px;
+  background-image: url("@img/example/example1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.grid__block2 {
+  grid-area: 1 / 4 / 3 / 6;
+  width: 350px;
+  height: 350px;
+  background-image: url("@img/example/example2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.grid__block3 {
+  grid-area: 3 / 4 / 5 / 6;
+  width: 350px;
+  height: 350px;
+  background-image: url("@img/example/example3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.grid__block4 {
+  grid-area: 1 / 6 / 3 / 8;
+  width: 350px;
+  height: 350px;
+  background-image: url("@img/example/example4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.grid__block5 {
+  grid-area: 3 / 6 / 5 / 8;
+  width: 350px;
+  height: 350px;
+  background-image: url("@img/example/example5.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.grid__block6 {
+  grid-area: 5 / 1 / 7 / 3;
+  width: 350px;
+  height: 350px;
+  background-image: url("@img/example/example6.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.grid__block7 {
+  grid-area: 7 / 1 / 9 / 3;
+  width: 350px;
+  height: 350px;
+  background-image: url("@img/example/example7.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.grid__block8 {
+  grid-area: 5 / 3 / 7 / 5;
+  width: 350px;
+  height: 350px;
+  background-image: url("@img/example/example8.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.grid__block9 {
+  grid-area: 7 / 3 / 9 / 5;
+  width: 350px;
+  height: 350px;
+  background-image: url("@img/example/example9.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.grid__block10 {
+  grid-area: 5 / 5 / 9 / 8;
+  width: 460px;
+  height: 720px;
+  background-image: url("@img/example/example10.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.example__hidden {
+  display: none;
+}
