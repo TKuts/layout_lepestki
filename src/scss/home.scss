@@ -56,32 +56,6 @@
   flex-direction: column;
   @include adaptiveValue("padding-top", 150, 65, 0, $containerWidth, 767.98);
   @include adaptiveValue("padding-bottom", 150, 65, 0, $containerWidth, 767.98);
-
-  &__container {
-    // display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-  }
-
-  // &__body {
-  //   display: grid;
-  //   grid-template-columns: repeat(2, 1fr);
-  // 	align-items: center;
-  //   @media (max-width: $tablet) {
-  //     grid-template-columns: auto;
-  //   }
-  //   // gap: toRem(54);
-  // }
-  // &__img {
-  //   max-width: 100%;
-  //   border-radius: 45px;
-  //   @media (max-width: $tablet) {
-  //     margin-bottom: toRem(20);
-  //   }
-
-  //   @media (min-width: $tablet) {
-  //     padding-right: toRem(54);
-  //   }
-  // }
 }
 // ======
 
@@ -115,16 +89,11 @@
       height: 2px;
       background: #608001;
       left: 0;
-
       position: relative;
       z-index: -1;
 
       @include adaptiveValue("bottom", 64, 25, 0, $containerWidth, 767.98);
     }
-  }
-
-  &__container {
-    // position: relative;
   }
 }
 
@@ -148,14 +117,49 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(8, 1fr);
-    // grid-column-gap: 20px;
-    // grid-row-gap: 20px;
 
     @include adaptiveValue("grid-column-gap", 20, 12, 0, $containerWidth, 1000);
     @include adaptiveValue("grid-row-gap", 20, 12, 0, $containerWidth, 1000);
 
     @media (max-width: $tablet) {
       display: none;
+    }
+  }
+  &__slider {
+    position: relative;
+    margin-bottom: toRem(25);
+  }
+  &__arrow {
+    transform: translate(0px, 15%);
+    transition:
+      opacity 1s,
+      transform 1s;
+    &--left {
+      position: absolute;
+      left: toRem(30);
+      background-image: url("@img/example/Arrow.svg");
+      width: 54px;
+      @include adaptiveValue("height", 20, 15, 0, $containerWidth, 350);
+      background-size: cover;
+      text-align: center;
+      transform: translate(0, 0);
+    }
+
+    &--right {
+      position: absolute;
+      right: toRem(30);
+      background-image: url("@img/example/Arrow.svg");
+      width: 54px;
+      @include adaptiveValue("height", 20, 15, 0, $containerWidth, 350);
+      background-size: cover;
+      text-align: center;
+      transform: rotate(180deg);
+      opacity: 1;
+      transform: translate(0, 0), rotate(180deg);
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0;
     }
   }
 }
@@ -229,39 +233,13 @@
     }
   }
 
-  &__slide {
-    &--first1,
-    &--first2,
-    &--first3,
-    &--first4,
-    &--first5,
-    &--second1,
-    &--second2,
-    &--second3,
-    &--second4,
-    &--second5 {
-    }
-
-    &--first1 {
-      @include adaptiveValue("height", 780, 335, 0, $containerWidth, 767.98);
-    }
-    &--first2 {
-    }
-    &--first3 {
-    }
-    &--first4 {
-    }
-    &--first5 {
-    }
-  }
-
   .first__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 13px;
     grid-row-gap: 13px;
-
+    padding-right: toRem(2);
     &--div1 {
       @include adaptiveValue("height", 850, 335, 0, $containerWidth, 320);
       background-size: cover;
@@ -307,7 +285,7 @@
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 13px;
     grid-row-gap: 13px;
-
+    padding-left: toRem(2);
     &--div5 {
       background-size: cover;
       background-position: center;
