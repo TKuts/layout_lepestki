@@ -1,3 +1,103 @@
 //====================================================================================================
+.footer {
+  background-color: $bgColorFooter;
+  font-size: 18px;
+  font-weight: 600;
+  &__grid {
+    padding: toRem(40) toRem(0) toRem(28);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+  }
 
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: toRem(72);
+    grid-row-gap: 20px;
+    & .menu__item {
+      &:not(:last-child) {
+        margin-bottom: toRem(30);
+      }
+    }
+    & .menu__link {
+    }
+  }
+
+  &__social {
+    &--list {
+      display: flex;
+    }
+
+    &--link {
+      display: block;
+      width: 75px;
+      height: 100px;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      &.instagram {
+        background-image: url("@img/footer/Instagram.svg");
+        margin-right: toRem(30);
+      }
+      &.telegram {
+        background-image: url("@img/footer/Telegram.svg");
+      }
+    }
+  }
+
+  &__contacts {
+    & div {
+      &:not(:last-child) {
+        margin-bottom: toRem(26);
+      }
+    }
+    & .mobile {
+      display: flex;
+      justify-content: space-between;
+
+      &__title {
+        margin-right: toRem(12);
+      }
+      &__numbers {
+        display: flex;
+        flex-direction: column;
+        & a {
+          text-align: end;
+          &:not(:last-child) {
+            margin-bottom: toRem(5);
+          }
+        }
+      }
+    }
+
+    & .email {
+      display: flex;
+      justify-content: space-between;
+      &__title {
+        margin-right: toRem(36);
+      }
+    }
+
+    & .adress {
+      display: flex;
+      justify-content: space-between;
+
+      &__title {
+        margin-right: toRem(12);
+      }
+      &__points {
+        display: flex;
+        flex-direction: column;
+        & p {
+          &:not(:last-child) {
+            margin-bottom: toRem(5);
+            text-align: end;
+          }
+        }
+      }
+    }
+  }
+}
 //====================================================================================================

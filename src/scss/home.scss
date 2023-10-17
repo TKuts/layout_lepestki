@@ -55,12 +55,11 @@
   display: flex;
   flex-direction: column;
   @include adaptiveValue("padding-top", 150, 65, 0, $containerWidth, 767.98);
-  @include adaptiveValue("padding-bottom", 150, 65, 0, $containerWidth, 767.98);
 }
 // ======
 
 .services {
-  @include adaptiveValue("padding-bottom", 60, 5, 0, $containerWidth, 767.98);
+  @include adaptiveValue("padding-top", 150, 65, 0, $containerWidth, 767.98);
   &__line--first {
     &::before {
       content: "";
@@ -111,7 +110,6 @@
 
 //====================================================================================================
 .example {
-  @include adaptiveValue("padding-bottom", 170, 65, 0, $containerWidth, 767.98);
   @include adaptiveValue("padding-top", 170, 65, 0, $containerWidth, 767.98);
   &__grid {
     display: grid;
@@ -162,74 +160,71 @@
       opacity: 0;
     }
   }
-}
-
-.grid {
-  &__block1,
-  &__block2,
-  &__block3,
-  &__block4,
-  &__block5,
-  &__block6,
-  &__block7,
-  &__block8,
-  &__block9,
-  &__block10 {
-    background-size: cover;
-    background-position: center;
-    border-radius: 45px;
-  }
-
-  &__block1 {
-    grid-area: 1 / 1 / 5 / 4;
-    background-image: url("@img/example/example1.jpg");
-  }
-
-  &__block2 {
-    grid-area: 1 / 4 / 3 / 6;
-    background-image: url("@img/example/example2.jpg");
-  }
-  &__block3 {
-    grid-area: 3 / 4 / 5 / 6;
-    background-image: url("@img/example/example3.jpg");
-  }
-  &__block4 {
-    grid-area: 1 / 6 / 3 / 8;
-    background-image: url("@img/example/example4.jpg");
-  }
-  &__block5 {
-    grid-area: 3 / 6 / 5 / 8;
-    background-image: url("@img/example/example5.jpg");
-  }
-  &__block6 {
-    grid-area: 5 / 1 / 7 / 3;
-    background-image: url("@img/example/example6.jpg");
-  }
-  &__block7 {
-    grid-area: 7 / 1 / 9 / 3;
-    background-image: url("@img/example/example7.jpg");
-  }
-  &__block8 {
-    grid-area: 5 / 3 / 7 / 5;
-    background-image: url("@img/example/example8.jpg");
-  }
-  &__block9 {
-    grid-area: 7 / 3 / 9 / 5;
-    background-image: url("@img/example/example9.jpg");
-  }
-  &__block10 {
-    grid-area: 5 / 5 / 9 / 8;
-    height: 720px;
-    background-image: url("@img/example/example10.jpg");
-  }
-}
-
-.example {
   &__hidden {
     display: none;
 
     @media (max-width: $tablet) {
       display: block;
+    }
+  }
+
+  .grid {
+    &__block1,
+    &__block2,
+    &__block3,
+    &__block4,
+    &__block5,
+    &__block6,
+    &__block7,
+    &__block8,
+    &__block9,
+    &__block10 {
+      background-size: cover;
+      background-position: center;
+      border-radius: 45px;
+    }
+
+    &__block1 {
+      grid-area: 1 / 1 / 5 / 4;
+      background-image: url("@img/example/example1.jpg");
+    }
+
+    &__block2 {
+      grid-area: 1 / 4 / 3 / 6;
+      background-image: url("@img/example/example2.jpg");
+    }
+    &__block3 {
+      grid-area: 3 / 4 / 5 / 6;
+      background-image: url("@img/example/example3.jpg");
+    }
+    &__block4 {
+      grid-area: 1 / 6 / 3 / 8;
+      background-image: url("@img/example/example4.jpg");
+    }
+    &__block5 {
+      grid-area: 3 / 6 / 5 / 8;
+      background-image: url("@img/example/example5.jpg");
+    }
+    &__block6 {
+      grid-area: 5 / 1 / 7 / 3;
+      background-image: url("@img/example/example6.jpg");
+    }
+    &__block7 {
+      grid-area: 7 / 1 / 9 / 3;
+      background-image: url("@img/example/example7.jpg");
+    }
+    &__block8 {
+      grid-area: 5 / 3 / 7 / 5;
+      background-image: url("@img/example/example8.jpg");
+    }
+    &__block9 {
+      grid-area: 7 / 3 / 9 / 5;
+      background-image: url("@img/example/example9.jpg");
+    }
+    &__block10 {
+      grid-area: 5 / 5 / 9 / 8;
+      height: 720px;
+      background-image: url("@img/example/example10.jpg");
     }
   }
 
@@ -325,7 +320,7 @@
 }
 // ================
 .reviews {
-  @include adaptiveValue("padding-bottom", 170, 65, 0, $containerWidth, 767.98);
+	@include adaptiveValue("padding-top", 170, 65, 0, $containerWidth, 767.98);
   &__hidden {
     padding-bottom: toRem(30);
     display: none;
@@ -441,6 +436,7 @@
 
 // =======
 .delivery {
+	@include adaptiveValue("padding-top", 170, 65, 0, $containerWidth, 767.98);
   @include adaptiveValue("padding-bottom", 170, 65, 0, $containerWidth, 767.98);
   &__title {
     color: #608001;
@@ -544,3 +540,4 @@
     }
   }
 }
+// =======
