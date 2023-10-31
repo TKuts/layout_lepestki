@@ -1,13 +1,24 @@
 //====================================================================================================
 .footer {
   background-color: $bgColorFooter;
-  font-size: 18px;
+  @include adaptiveValue("font-size", 18, 12, 0, $containerWidth, 767.98);
   font-weight: 600;
+  &__container {
+    @include adaptiveValue("padding-top", 40, 28, 0, $containerWidth, 767.98);
+    @include adaptiveValue("padding-bottom", 28, 0, 0, $containerWidth, 767.98);
+    padding-left: toRem(15);
+    padding-right: toRem(15);
+    // padding-bottom: toRem(28);
+  }
   &__grid {
-    padding: toRem(40) toRem(0) toRem(28);
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: space-between;
+
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
   }
 
   &__menu {
@@ -15,10 +26,38 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     grid-column-gap: toRem(72);
-    grid-row-gap: 20px;
+    grid-row-gap: tpRem(20);
+
+    @media (max-width: $tablet) {
+      grid-area: 1 / 1 / 2 / 2;
+
+      grid-template-columns: auto;
+    }
+
+    & .menu__list {
+      margin-bottom: toRem(25);
+
+      &:not(:last-child) {
+        @include adaptiveValue(
+          "margin-bottom",
+          20,
+          10,
+          0,
+          $containerWidth,
+          767.98
+        );
+      }
+    }
     & .menu__item {
       &:not(:last-child) {
-        margin-bottom: toRem(30);
+        @include adaptiveValue(
+          "margin-bottom",
+          30,
+          10,
+          0,
+          $containerWidth,
+          767.98
+        );
       }
     }
     & .menu__link {
@@ -26,8 +65,13 @@
   }
 
   &__social {
+    @media (max-width: $tablet) {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+
     &--list {
       display: flex;
+      justify-content: end;
     }
 
     &--link {
@@ -39,7 +83,14 @@
       text-align: center;
       &.instagram {
         background-image: url("@img/footer/Instagram.svg");
-        margin-right: toRem(30);
+        @include adaptiveValue(
+          "margin-right",
+          30,
+          21,
+          0,
+          $containerWidth,
+          767.98
+        );
       }
       &.telegram {
         background-image: url("@img/footer/Telegram.svg");
@@ -48,14 +99,29 @@
   }
 
   &__contacts {
+    @media (max-width: $tablet) {
+      grid-area: 2 / 1 / 3 / 3;
+    }
+
     & div {
       &:not(:last-child) {
-        margin-bottom: toRem(26);
+        @include adaptiveValue(
+          "margin-bottom",
+          26,
+          18,
+          0,
+          $containerWidth,
+          767.98
+        );
       }
     }
     & .mobile {
       display: flex;
       justify-content: space-between;
+
+      @media (max-width: $mobile) {
+        justify-content: start;
+      }
 
       &__title {
         margin-right: toRem(12);
@@ -75,14 +141,29 @@
     & .email {
       display: flex;
       justify-content: space-between;
+
+      @media (max-width: $mobile) {
+        justify-content: start;
+      }
       &__title {
-        margin-right: toRem(36);
+        @include adaptiveValue(
+          "margin-right",
+          36,
+          20,
+          0,
+          $containerWidth,
+          767.98
+        );
       }
     }
 
     & .adress {
       display: flex;
       justify-content: space-between;
+
+      @media (max-width: $mobile) {
+        justify-content: start;
+      }
 
       &__title {
         margin-right: toRem(12);
@@ -94,6 +175,10 @@
           &:not(:last-child) {
             margin-bottom: toRem(5);
             text-align: end;
+
+            @media (max-width: $tablet) {
+              text-align: start;
+            }
           }
         }
       }

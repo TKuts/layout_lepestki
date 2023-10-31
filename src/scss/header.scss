@@ -14,6 +14,7 @@
     gap: toRem(15);
     padding-top: toRem(10);
     padding-bottom: toRem(10);
+		
     @media (max-width: $mobile) {
       justify-content: space-between;
       grid-template-columns: auto auto;
