@@ -320,7 +320,7 @@
 }
 // ================
 .reviews {
-	@include adaptiveValue("padding-top", 170, 65, 0, $containerWidth, 767.98);
+  @include adaptiveValue("padding-top", 170, 65, 0, $containerWidth, 767.98);
   &__hidden {
     padding-bottom: toRem(30);
     display: none;
@@ -435,8 +435,62 @@
 }
 
 // =======
+
+.advice {
+  padding-top: toRem(170);
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: toRem(58);
+  }
+  &__form {
+    &--title {
+      color: $darkGreen;
+      font-family: Dihjauti;
+      font-size: toRem(40);
+      font-weight: 700;
+      line-height: toRem(55);
+      &:not(:last-child) {
+        margin-bottom: toRem(18);
+      }
+    }
+
+    & .order__form {
+      display: flex;
+      // grid-template-columns: auto;
+      gap: toRem(40);
+      flex-direction: column;
+    }
+
+    & input {
+      color: $mainColor;
+      font-size: 22px;
+      font-weight: 600;
+      padding-bottom: toRem(15);
+      outline: none;
+      box-sizing: border-box;
+      border-bottom: 1px solid $mainColor;
+
+      &::placeholder {
+        color: $mainColor;
+        font-size: 22px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__picture {
+    height: 549px;
+    background-size: cover;
+    background-position: center;
+    border-radius: toRem(45);
+    background-image: url("@img/advice/advice.jpg");
+  }
+}
+
+// =======
 .delivery {
-	@include adaptiveValue("padding-top", 170, 65, 0, $containerWidth, 767.98);
+  @include adaptiveValue("padding-top", 170, 65, 0, $containerWidth, 767.98);
   @include adaptiveValue("padding-bottom", 170, 65, 0, $containerWidth, 767.98);
   &__title {
     color: #608001;

@@ -8,7 +8,6 @@
     @include adaptiveValue("padding-bottom", 28, 0, 0, $containerWidth, 767.98);
     padding-left: toRem(15);
     padding-right: toRem(15);
-    // padding-bottom: toRem(28);
   }
   &__grid {
     display: grid;
@@ -59,8 +58,6 @@
           767.98
         );
       }
-    }
-    & .menu__link {
     }
   }
 
