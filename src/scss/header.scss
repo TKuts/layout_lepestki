@@ -6,6 +6,8 @@
   top: 0;
   left: 0;
   z-index: 50;
+  border-bottom: 1px solid $logoTextColor;
+
   &__container {
     display: grid;
     grid-template-columns: 1fr;
@@ -14,7 +16,7 @@
     gap: toRem(15);
     padding-top: toRem(10);
     padding-bottom: toRem(10);
-		
+
     @media (max-width: $mobile) {
       justify-content: space-between;
       grid-template-columns: auto auto;
@@ -26,28 +28,30 @@
     z-index: 5;
     cursor: pointer;
     &-text {
-      top: -7px;
       position: relative;
-      color: #fff;
+      top: -7px;
+      font-weight: 600;
       font-size: 10px;
+      color: $logoTextColor;
     }
   }
   .menu {
     justify-self: center;
     &__body {
       @media (max-width: $mobile) {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        row-gap: toRem(40);
-        padding: toRem(120) toRem(15) toRem(25) toRem(15);
-        top: 0;
-        left: 100%;
-        overflow: auto;
         display: flex;
         flex-direction: column;
-        background-color: $bgColorDark;
+        position: fixed;
+        background-color: $bgColor;
+        row-gap: toRem(40);
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        padding: toRem(120) toRem(15) toRem(25) toRem(15);
+        overflow: auto;
         transition: left 0.5s;
+
         &::before {
           content: "";
           position: fixed;
@@ -57,7 +61,9 @@
           left: 100%;
           z-index: 2;
           transition: left 0.5s;
+					margin-top: 14px;
           background-color: $bgColor;
+          border-bottom: 1px solid $logoTextColor;
         }
         .menu-open & {
           left: 0;
@@ -84,7 +90,8 @@
       }
     }
     &__link {
-      color: #fff;
+      color: $headerTextColor;
+      font-weight: 600;
       @media (any-hover: hover) {
         &:hover {
           text-decoration: underline;
@@ -118,7 +125,7 @@
       position: absolute;
       width: 100%;
       height: toRem(2);
-      background-color: #fff;
+      background-color: $logoTextColor;
     }
     &::before {
       top: 0;

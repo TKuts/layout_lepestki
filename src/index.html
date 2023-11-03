@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/_head.htm',{
-"title":"HomePage"
+"title":"Lepestki Studiya"
 })
 
 <body>
@@ -14,7 +14,7 @@
 					<h2 class="hero__tittle hero__tittle--light">СТУДІЯ ФЛОРИСТИКИ</h2>
 					<p class="hero__tittle hero__tittle--small">Невичерпне натхнення квітковим мистецтвом</p>
 				</div>
-				<a href="#" class="button button--green">
+				<a href="#" data-goto=".services--hero" class="button button--green">
 					<span>
 						ПОСЛУГИ
 					</span>
@@ -181,7 +181,6 @@
 
 				</div>
 			</section>
-
 
 			<section data-watch class="reviews">
 				<div class="reviews__container">
@@ -352,17 +351,19 @@
 				<div class="advice__container ">
 
 					<div class="advice__form">
-						<h4 class="advice__form--title">
-							ЗАПОВНИ ДАНІ ТА ОТРИМАЙ КОНСУЛЬТАЦІЮ
-						</h4>
+						<div>
+							<h4 class="advice__form--title">
+								ЗАПОВНИ ДАНІ ТА ОТРИМАЙ КОНСУЛЬТАЦІЮ
+							</h4>
+							<form action="#" class="order__form" id="orderForm" method="post">
+								<input type="text" placeholder="Ваше ім’я">
+								<input type="tel" maxlength="13" placeholder="Телефон">
+								<input type="email" placeholder="E-mail">
+							</form>
+						</div>
 
-						<form action="#" class="order__form">
-							<input type="text" placeholder="Ваше ім’я">
-							<input type="tel" maxlength="13" placeholder="Телефон">
-							<input type="email" placeholder="E-mail">
+						<button type="submit" class="button button--pink advice__form--button" form="orderForm">ЗАМОВИТИ</button>
 
-							<button type="submit" class="button button--pink">ЗАМОВИТИ</button>
-						</form>
 					</div>
 
 					<div class="advice__picture">
