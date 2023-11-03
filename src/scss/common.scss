@@ -69,9 +69,6 @@
       align-items: center;
       @include adaptiveValue("font-size", 45, 26);
     }
-
-    &--centr {
-    }
   }
 
   @media (max-width: $tablet) {
@@ -146,9 +143,3 @@
     }
   }
 }
-// ==========
-// <div class="block-body">
-// <h2 class="block-body__title block-body__title--small"></h2>
-// <div class=""></div>
-// </div>
-// ========
