@@ -330,6 +330,10 @@
     }
   }
 
+  &--wraper {
+    margin-bottom: 8px;
+  }
+
   &__block {
     display: flex;
     @media (max-width: $tablet) {
@@ -374,9 +378,7 @@
     }
     &__text {
       font-size: 24px;
-
       font-weight: 300;
-      color: #000;
       &:not(:last-child) {
         @include adaptiveValue(
           "margin-bottom",
@@ -405,6 +407,7 @@
         transform 1s;
       &--left {
         position: absolute;
+
         left: toRem(30);
         background-image: url("@img/example/Arrow.svg");
         width: 54px;
@@ -488,6 +491,8 @@
 
     & input {
       color: $mainColor;
+      background-color: $bgColor;
+
       @include adaptiveValue("font-size", 22, 14, 0, $containerWidth, 767.98);
       font-weight: 600;
       @include adaptiveValue(
@@ -504,6 +509,7 @@
 
       &::placeholder {
         color: $mainColor;
+        background-color: $bgColor;
         @include adaptiveValue("font-size", 22, 14, 0, $containerWidth, 767.98);
         font-weight: 600;
       }
